@@ -1,5 +1,4 @@
 from seleniumpagefactory.Pagefactory import PageFactory
-
 from utilities.Waiter import Waiter
 
 class CookiePreferences(PageFactory, Waiter):
