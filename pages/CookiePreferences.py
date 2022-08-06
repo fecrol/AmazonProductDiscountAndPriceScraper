@@ -1,6 +1,8 @@
 from seleniumpagefactory.Pagefactory import PageFactory
 
-class CookiePreferences(PageFactory):
+from utilities.Waiter import Waiter
+
+class CookiePreferences(PageFactory, Waiter):
 
     def __init__(self, driver):
         
@@ -11,4 +13,6 @@ class CookiePreferences(PageFactory):
     }
 
     def click_accept_cookies_btn(self):
+
+        self.wait_for_element_to_be_clickable(self.driver, 5, self.accept_cookies_btn)
         self.accept_cookies_btn.click()
