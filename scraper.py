@@ -14,8 +14,10 @@ cookie_preferences_page = CookiePreferences(driver)
 cookie_preferences_page.click_accept_cookies_btn()
 
 product_page = ProductPage(driver)
-discount = product_page.get_savings_percentage()
+savings_percentage = product_page.get_savings_percentage()
+price_to_pay = product_page.get_price_to_pay()
 
-print(f"Current Discount is {discount}")
+print(f"Current Discount is {savings_percentage}")
+print(f"The current price to pay is {price_to_pay}")
 
 driver.quit()
