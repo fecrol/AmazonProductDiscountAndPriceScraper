@@ -3,11 +3,15 @@ from pages.CookiePreferences import CookiePreferences
 from pages.ProductPage import ProductPage
 from datetime import datetime
 from utilities.CsvWriter import CsvWriter
+from utilities.CliArgumentParser import CliArgumentParser
 
-url = "https://www.amazon.co.uk/Logitech-Rechargeable-Multi-Device-Programmable-Productivity/dp/B071KZS3MF/ref=sr_1_5?crid=2D1EPUCESTOID&keywords=logitech+mx+master&qid=1659795024&sprefix=logitech+mx+master%2Caps%2C840&sr=8-5"
+cli_argument_parser = CliArgumentParser()
+
+url = cli_argument_parser.get_url()
+date = datetime.today().strftime("%Y-%m-%d")
+csv_filename = cli_argument_parser.get_csv_filename()
 
 webdriver_config = WebdriverConfig()
-
 driver = webdriver_config.start_driver()
 
 driver.get(url)
@@ -22,9 +26,6 @@ savings_percentage = savings_percentage.replace("-", "").replace("%", "")
 price_to_pay = product_page.get_price_to_pay()
 price_to_pay = ".".join(price_to_pay.split("\n")).replace("£", "")
 
-date = datetime.today().strftime("%Y-%m-%d")
-
-csv_filename = "price_data.csv"
 data = [[date, savings_percentage, price_to_pay]]
 columns = ["Date", "Discount Percentage", "Current Price"]
 
