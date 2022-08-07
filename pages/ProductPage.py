@@ -9,6 +9,7 @@ class ProductPage(PageFactory, Waiter):
     
     locators = {
         "savings_percentage": ("css", ".savingsPercentage"),
+        "price_to_pay": ("css", ".priceToPay"),
         "add_to_cart_btn": ("id", "add-to-cart-button")
     }
 
@@ -18,4 +19,9 @@ class ProductPage(PageFactory, Waiter):
             self.wait_for_element_to_be_clickable(self.driver, 5, self.add_to_cart_btn)
             return self.savings_percentage.text
         except:
-            return "0%"
+            return "-0%"
+    
+    def get_price_to_pay(self):
+
+        self.wait_for_element_to_be_clickable(self.driver, 5, self.add_to_cart_btn)
+        return self.price_to_pay.text
