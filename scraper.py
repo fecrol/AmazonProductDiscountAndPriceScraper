@@ -2,7 +2,6 @@ from WebdriverConfig import WebdriverConfig
 from pages.CookiePreferences import CookiePreferences
 from pages.ProductPage import ProductPage
 from datetime import datetime
-
 from utilities.CsvWriter import CsvWriter
 
 url = "https://www.amazon.co.uk/Logitech-Rechargeable-Multi-Device-Programmable-Productivity/dp/B071KZS3MF/ref=sr_1_5?crid=2D1EPUCESTOID&keywords=logitech+mx+master&qid=1659795024&sprefix=logitech+mx+master%2Caps%2C840&sr=8-5"
