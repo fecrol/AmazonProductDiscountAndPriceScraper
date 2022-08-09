@@ -34,7 +34,7 @@ Make sure you have Python 3 installed (My exact Python version at the time of wr
 - Make sure you don't accidentaly remove any single or double quotations from here: ```"{'url': 'url to specific amazon product page', 'csv-filename': 'price_data.csv'}"```
 - The URL you provide needs to be for Amazon page of a specific product.
 - Example of a an Amazon page of a specific product:
-{img goes here}
+![Screenshot (11)](https://user-images.githubusercontent.com/38907699/183686007-70368ffd-d0c9-47ac-b6a3-61493d55b3d8.png)
 
 After the completion of all the above instructions, the program should be runnable.
 
