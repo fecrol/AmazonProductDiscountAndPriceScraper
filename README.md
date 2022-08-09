@@ -41,7 +41,7 @@ Make sure you have Python 3 installed (My exact Python version at the time of wr
 After the completion of all the above instructions, the program should be runnable.
 
 ###### Steps to run the program:
-- Navigate the directory containing the batch file
+- Navigate to the directory containing the batch file
 - Double click the batch file to run the program
 
-If the program fails, please doube check you have installed all the dependecies, your batch file is correct and that you have provided a valid URL to an Amazon product page.
+If the program fails, please doube check you have installed all the dependecies, your batch file is correct, and that you have provided a valid URL to an Amazon product page.
