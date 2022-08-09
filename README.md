@@ -27,7 +27,7 @@ Make sure you have Python 3 installed (My exact Python version at the time of wr
 - Copy the directory path
 - Open Notepad
 - And replicate this:
-```project_code_directory_path\venv\Scripts\activate.bat && project_code_directory_path\sraper.py "{'url': 'url to specific amazon product page', 'csv-filename': 'price_data.csv'}" && project_code_directory_path\venv\Scripts\deactivate.bat```
+```project_code_directory_path\venv\Scripts\activate.bat && python project_code_directory_path\sraper.py "{'url': 'url to specific amazon product page', 'csv-filename': 'price_data.csv'}" && project_code_directory_path\venv\Scripts\deactivate.bat```
 - Save the file as your_filename.bat in a directory of your choosing.
 - Your batch file should look something like this:
 <img width="1064" alt="batch_file" src="https://user-images.githubusercontent.com/38907699/183686677-ad8a9bdf-d39f-428f-ae1b-67ff2d31adeb.PNG">
