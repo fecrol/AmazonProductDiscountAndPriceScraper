@@ -6,7 +6,7 @@ class CliArgumentParser:
     def __init__(self):
         
         try:
-            self.__args_as_string = sys.argv[1].replace("'", "\"")
+            self.__args_as_string = sys.argv[1].replace("'", "\"").replace("\\", "/")
             self.__args_as_dict = json.loads(self.__args_as_string)
         except:
             print("An error has occured")
