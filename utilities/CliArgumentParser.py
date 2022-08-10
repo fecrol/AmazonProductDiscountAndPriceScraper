@@ -33,3 +33,14 @@ class CliArgumentParser:
         except:
             print("Error: No CSV Filename found in list of arguments")
             sys.exit()
+    
+    def get_csv_file_path(self):
+        """
+        Mandatory command line argument needed to run the script
+        """
+
+        try:
+            return self.__args_as_dict["csv-file-path"]
+        except:
+            print("Error: No CSV file path found in list of arguments")
+            sys.exit()
