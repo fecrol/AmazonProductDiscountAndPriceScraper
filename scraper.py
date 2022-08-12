@@ -26,7 +26,7 @@ savings_percentage = product_page.get_savings_percentage()
 savings_percentage = savings_percentage.replace("-", "").replace("%", "")
 
 price_to_pay = product_page.get_price_to_pay()
-price_to_pay = ".".join(price_to_pay.split("\n")).replace("£", "")
+price_to_pay = ".".join(price_to_pay.split("\n")).replace("£", "").replace("\r", "")
 
 data = [[date, savings_percentage, price_to_pay]]
 columns = ["Date", "Discount Percentage", "Current Price"]
