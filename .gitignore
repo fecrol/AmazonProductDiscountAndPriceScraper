@@ -2,4 +2,4 @@ __pycache__/
 /.vscode
 /venv
 scraper_runner.bat
-price_data.csv
+*.csv
