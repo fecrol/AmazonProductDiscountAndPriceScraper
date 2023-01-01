@@ -3,15 +3,16 @@ from pages.CookiePreferences import CookiePreferences
 from pages.ProductPage import ProductPage
 from datetime import datetime
 from utilities.CsvWriter import CsvWriter
-from utilities.CliArgumentParser import CliArgumentParser
 import os
+from utilities.ConfigJsonParser import ConfigJsonParser
 
-cli_argument_parser = CliArgumentParser()
+config_json_parser = ConfigJsonParser()
+config_data = config_json_parser.get_config_data()
 
-url = cli_argument_parser.get_url()
+url = config_data.get("productUrl")
 date = datetime.today().strftime("%Y-%m-%d")
-csv_file_path = cli_argument_parser.get_csv_file_path()
-csv_filename = cli_argument_parser.get_csv_filename()
+csv_file_path = config_data.get("csvFilepath")
+csv_filename = config_data.get("csvFilename")
 
 webdriver_config = WebdriverConfig()
 driver = webdriver_config.start_driver()
